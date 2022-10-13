@@ -15,13 +15,33 @@ namespace kosar2004
             MasodikFeladat();
             HarmadikFeladat();
             NegyedikFeladat();
+            OtodikFeladat();
 
             Console.ReadKey();
         }
 
-        private static void NegyedikFeladat()
+        private static void OtodikFeladat()
         {
 
+        }
+
+        private static void NegyedikFeladat()
+        {
+            Console.Write("4. feladat: Volt döntetlen? ");
+
+            bool van = false;
+            foreach (var kosar in kosars)
+            {
+                if (kosar.Hazai_pont == kosar.Idegen_pont)
+                {
+                    van = true;
+                }
+            }
+
+            if (van)
+                Console.WriteLine("igen");
+            else
+                Console.WriteLine("nem");
         }
 
         private static void HarmadikFeladat()
