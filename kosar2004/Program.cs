@@ -22,7 +22,7 @@ namespace kosar2004
 
         private static void OtodikFeladat()
         {
-
+            Console.WriteLine("5. feladat: barcelonai csapat neve: ");
         }
 
         private static void NegyedikFeladat()
