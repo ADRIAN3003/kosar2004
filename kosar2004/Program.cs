@@ -14,8 +14,14 @@ namespace kosar2004
         {
             MasodikFeladat();
             HarmadikFeladat();
+            NegyedikFeladat();
 
             Console.ReadKey();
+        }
+
+        private static void NegyedikFeladat()
+        {
+
         }
 
         private static void HarmadikFeladat()
