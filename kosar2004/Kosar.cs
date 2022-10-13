@@ -56,5 +56,6 @@ namespace kosar2004
             set { idopont = value; }
         }
 
+
     }
 }
