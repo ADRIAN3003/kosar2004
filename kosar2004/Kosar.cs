@@ -29,7 +29,7 @@ namespace kosar2004
         public int Hazai_pont
         {
             get { return hazai_pont; }
-            set { hazai_pont = value; }
+            private set { hazai_pont = value; }
         }
 
         private int idegen_pont;
@@ -37,7 +37,7 @@ namespace kosar2004
         public int Idegen_pont
         {
             get { return idegen_pont; }
-            set { idegen_pont = value; }
+            private set { idegen_pont = value; }
         }
 
         private string helyszin;
@@ -45,7 +45,7 @@ namespace kosar2004
         public string Helyszin
         {
             get { return helyszin; }
-            set { helyszin = value; }
+            private set { helyszin = value; }
         }
 
         private DateTime idopont;
@@ -53,9 +53,17 @@ namespace kosar2004
         public DateTime Idopont
         {
             get { return idopont; }
-            set { idopont = value; }
+            private set { idopont = value; }
         }
 
-
+        public Kosar(string hazai, string idegen, int hazai_pont, int idegen_pont, string helyszin, DateTime idopont)
+        {
+            Hazai = hazai;
+            Idegen = idegen;
+            Hazai_pont = hazai_pont;
+            Idegen_pont = idegen_pont;
+            Helyszin = helyszin;
+            Idopont = idopont;
+        }
     }
 }
