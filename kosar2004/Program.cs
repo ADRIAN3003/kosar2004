@@ -22,7 +22,21 @@ namespace kosar2004
 
         private static void OtodikFeladat()
         {
-            Console.WriteLine("5. feladat: barcelonai csapat neve: ");
+            Console.Write("5. feladat: barcelonai csapat neve: ");
+            bool van = false;
+            int x = 0;
+            while (x < kosars.Count && !van)
+            {
+                if (kosars[x].Hazai.Contains("Barcelona"))
+                {
+                    van = true;
+                }
+                x++;
+            }
+            if (van)
+            {
+                Console.WriteLine($"{kosars[x].Hazai}");
+            }
         }
 
         private static void NegyedikFeladat()
