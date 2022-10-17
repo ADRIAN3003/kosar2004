@@ -17,8 +17,33 @@ namespace kosar2004
             NegyedikFeladat();
             OtodikFeladat();
             HatodikFeladat();
+            HetedikFeladat();
 
             Console.ReadKey();
+        }
+
+        private static void HetedikFeladat()
+        {
+            Console.WriteLine("7. feladat:");
+            Dictionary<string, int> stat = new Dictionary<string, int>();
+            foreach (var item in kosars)
+            {
+                if (stat.ContainsKey(item.Helyszin))
+                {
+                    stat[item.Helyszin]++;
+                }
+                else
+                {
+                    stat.Add(item.Helyszin, 1);
+                }
+            }
+            foreach (var item in stat)
+            {
+                if (item.Value > 20)
+                {
+                    Console.WriteLine($"\t{item.Key} {item.Value}");
+                }
+            }
         }
 
         private static void HatodikFeladat()
