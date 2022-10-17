@@ -16,8 +16,21 @@ namespace kosar2004
             HarmadikFeladat();
             NegyedikFeladat();
             OtodikFeladat();
+            HatodikFeladat();
 
             Console.ReadKey();
+        }
+
+        private static void HatodikFeladat()
+        {
+            Console.WriteLine("6. feladat:");
+            for (int i = 0; i < kosars.Count; i++)
+            {
+                if (kosars[i].Idopont.Year == 2004 && kosars[i].Idopont.Month == 11 && kosars[i].Idopont.Day == 21)
+                {
+                    Console.WriteLine($"\t{kosars[i].Hazai} - {kosars[i].Idegen} ({kosars[i].Hazai_pont}:{kosars[i].Idegen_pont})");
+                }
+            }
         }
 
         private static void OtodikFeladat()
